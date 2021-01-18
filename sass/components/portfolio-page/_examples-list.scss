@@ -1,0 +1,116 @@
+.work-example {
+  @include centered-flex(flex);
+  flex-wrap: wrap;
+  @extend %list;
+}
+
+.work-example__card {
+  width: calc((100% - 2 * 30px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.work-example__card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.work-example__card:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.work-example__link {
+  display: block;
+  @extend %animation-box-shadow;
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+}
+
+.work-example__info {
+  width: 370px;
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-left: 1px solid $portfolio-card-border-color;
+  border-right: 1px solid $portfolio-card-border-color;
+  border-bottom: 1px solid $portfolio-card-border-color;
+}
+
+.work-example__title {
+  margin-bottom: 4px;
+  text-align: left;
+  @include typography(700, 18px, 2, 0.06em);
+  // font-weight: 700;
+  // font-size: 18px;
+  // line-height: 2;
+  // letter-spacing: 0.06em;
+
+  color: $primary-text-color;
+}
+
+.work-example__type {
+  text-align: left;
+  @include typography(400, 16px, 1.88, 0.03em);
+  // font-weight: 400;
+  // font-size: 16px;
+  // line-height: 1.88;
+  // letter-spacing: 0.03em;
+
+  color: $secondary-text-color;
+}
+
+.work-example__pop-up-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-example__pop-up-thumb::before {
+  display: inline-block;
+  content: "";
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $card-overlay-color;
+
+  opacity: 0;
+  transform: translateY(100%);
+
+  @extend %animation-opacity-transform;
+}
+
+.work-example__pop-up-descr {
+  position: absolute;
+
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-right: 24px;
+  padding-left: 24px;
+
+  @include typography(400, 18px, 1.56, 0.03em);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: $secondary-accent-color;
+
+  opacity: 0;
+  transform: translateY(100%);
+
+  @extend %animation-opacity-transform;
+}
+
+.work-example__link:hover .work-example__pop-up-thumb::before,
+.work-example__card:hover .work-example__pop-up-descr {
+  transform: translateY(0);
+}
+
+.work-example__card:hover .work-example__pop-up-thumb::before,
+.work-example__card:hover .work-example__pop-up-descr {
+  opacity: 1;
+}

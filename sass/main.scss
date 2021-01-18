@@ -1,0 +1,26 @@
+// Utils
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+// Base
+@import "./base/normalize";
+@import "./base/general";
+
+@import "./components/common/header";
+@import "./components/common/logo";
+@import "./components/common/site-nav";
+@import "./components/common/contacts-nav";
+@import "./components/common/container";
+@import "./components/common/section";
+@import "./components/main-page/hero";
+@import "./components/common/buttons";
+@import "./components/main-page/advantages";
+@import "./components/main-page/what-we-do";
+@import "./components/main-page/our-team";
+@import "./components/common/social-links";
+@import "./components/main-page/clients";
+@import "./components/common/footer";
+@import "./components/main-page/modal-window";
+// Portfolio
+@import "./components/portfolio-page/filter";
+@import "./components/portfolio-page/examples-list";

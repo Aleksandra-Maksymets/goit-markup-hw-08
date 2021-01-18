@@ -1,0 +1,12 @@
+@mixin centered-flex($type, $Y: unset, $X: unset) {
+  display: $type;
+  align-items: $Y;
+  justify-content: $X;
+}
+
+@mixin typography($weight, $size, $height, $spaing) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spaing;
+}

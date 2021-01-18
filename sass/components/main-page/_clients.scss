@@ -1,0 +1,34 @@
+.client-list {
+  @include centered-flex(flex);
+  @extend %list;
+}
+
+.client-list__thumb {
+  width: calc((100% - 5 * 30px) / 6);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.client-list__link {
+  @include centered-flex(flex, center, center);
+
+  height: 90px;
+  color: $icon-color;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+
+  @extend %animation-color-border-set;
+
+  &:hover,
+  &:focus {
+    color: $primary-accent-color;
+    border: 1px solid $primary-accent-color;
+    cursor: pointer;
+  }
+}
+
+.client-list__icon {
+  fill: currentColor;
+}

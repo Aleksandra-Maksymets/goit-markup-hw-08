@@ -1,0 +1,35 @@
+.social-links {
+  @include centered-flex(flex);
+  @extend %list;
+}
+
+.social-links__item {
+  @include centered-flex(flex);
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links__thumb {
+  @include centered-flex(flex, center, center);
+
+  width: 44px;
+  height: 44px;
+
+  color: $icon-color;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  @extend %animation-bg-color;
+
+  &:hover {
+    cursor: pointer;
+    color: $secondary-accent-color;
+    background-color: $primary-accent-color;
+  }
+}
+
+.social-links__icon {
+  fill: currentColor;
+}

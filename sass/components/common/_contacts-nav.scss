@@ -1,0 +1,35 @@
+.contacts-nav {
+  margin-left: auto;
+  @include centered-flex(flex);
+  @extend %list;
+}
+
+.contacts-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-nav__link {
+  display: block;
+  @include centered-flex(flex, center);
+  @include typography(500, 14px, 1.14, 0.02em);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
+
+  color: $secondary-text-color;
+
+  @extend %animation-color;
+
+  &:focus,
+  &:hover {
+    color: $primary-accent-color;
+    cursor: pointer;
+  }
+}
+
+.icon-email,
+.icon-phone {
+  margin-right: 10px;
+  fill: currentColor;
+}

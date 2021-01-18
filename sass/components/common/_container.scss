@@ -1,0 +1,25 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header__container {
+  @include centered-flex(flex, center);
+}
+
+.footer__container {
+  @include centered-flex(flex, baseline);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.portfolio__container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
