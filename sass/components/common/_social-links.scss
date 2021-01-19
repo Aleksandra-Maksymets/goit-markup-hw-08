@@ -1,5 +1,5 @@
 .social-links {
-  @include centered-flex(flex);
+  @include centered-flex(flex, center, center);
   @extend %list;
 }
 

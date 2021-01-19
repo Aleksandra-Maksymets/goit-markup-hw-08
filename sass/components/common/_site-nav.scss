@@ -1,35 +1,45 @@
 .site-nav {
-  @include centered-flex(flex, center);
+  @media screen and (min-width: $desktop) {
+    @include centered-flex(flex, center);
+  }
 }
+
 .site-nav__logo {
-  margin-right: 93px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 }
 
 .site-nav__list {
-  @include centered-flex(flex);
   @extend %list;
+  @media screen and (min-width: $desktop) {
+    @include centered-flex(flex);
+  }
 }
 
 .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  @include typography(500, 14px, 1.4, 0.02em);
-  // font-weight: 500;
-  // font-size: 14px;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
-
-  @extend %animation-color;
-
   &:hover,
   &:focus {
     color: $primary-accent-color;
     cursor: pointer;
+  }
+  @extend %animation-color;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include typography(500, 14px, 1.4, 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
   }
 }
 

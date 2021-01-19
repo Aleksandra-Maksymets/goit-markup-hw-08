@@ -1,13 +1,23 @@
 .advantages {
-  @include centered-flex(flex, center, center);
   @extend %list;
+  @media screen and (min-width: $desktop) {
+    @include centered-flex(flex, center, center);
+  }
 }
 
 .advantages__item {
-  width: calc((100% - 3 * 30px) / 4);
+  @media screen and (max-width: $desktop-1px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -19,17 +29,20 @@
   // line-height: 1.14;
   // letter-spacing: 0.03em;
   text-transform: uppercase;
+  @media screen and (min-width: $mobile) and (max-width: $tablet-1px) {
+    text-align: center;
+  }
 }
 
 .advantages__text {
+  color: $secondary-text-color;
   @include typography(400, 14px, 1.71, 0.03em);
   // font-weight: 400;
   // font-size: 14px;
   // line-height: 1.71;
   // letter-spacing: 0.03em;
-
-  color: $secondary-text-color;
 }
+
 .advantages__thumb {
   @include centered-flex(flex, center, center);
   background-color: $section-background-color;

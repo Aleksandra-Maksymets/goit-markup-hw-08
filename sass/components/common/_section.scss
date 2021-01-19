@@ -1,18 +1,37 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section--no-padding {
-  padding-bottom: 0;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0;
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
-  @include typography(700, 36px, 1.17, 0.03em);
-  // font-weight: 700;
-  // font-size: 36px;
-  // line-height: 1.17;
-  // letter-spacing: 0.03em;
   text-align: center;
+  @include typography(700, 28px, 1.17, 0.03em);
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    @include typography(700, 36px, 1.17, 0.03em);
+    // font-weight: 700;
+    // font-size: 36px;
+    // line-height: 1.17;
+    // letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+}
+
+.section--no-display {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
 }

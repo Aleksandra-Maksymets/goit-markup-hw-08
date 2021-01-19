@@ -3,12 +3,18 @@
 }
 
 .adress-wrapper {
-  width: 231px;
-  margin-right: 70px;
+  @media screen and (max-width: $tablet-1px) {
+    text-align: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+    width: 231px;
+  }
 }
 
 .address__item {
   display: block;
+  width: 100%;
 }
 
 .address,
@@ -46,6 +52,10 @@
 .social-media__text,
 .subscribe__text {
   margin-bottom: 20px;
+  @media screen and (max-width: $tablet-1px) {
+    text-align: center;
+    margin-top: 60px;
+  }
   @include typography(700, 14px, 1.14, 0.03em);
   // font-weight: 700;
   // font-size: 14px;
@@ -63,16 +73,20 @@
 }
 
 .subscribe {
-  margin-left: 93px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
 .subscribe__form {
-  @include centered-flex(flex);
+  @media screen and (min-width: $desktop) {
+    @include centered-flex(flex);
+  }
 }
 
 .subscribe__input {
   display: block;
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -95,5 +109,12 @@
   &:focus {
     outline: none;
     border-color: $primary-accent-color;
+  }
+  @media screen and (max-width: $tablet-1px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
   }
 }

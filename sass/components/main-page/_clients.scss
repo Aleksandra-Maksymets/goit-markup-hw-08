@@ -1,13 +1,26 @@
 .client-list {
-  @include centered-flex(flex);
   @extend %list;
+  @include centered-flex(flex, center, center);
+  flex-wrap: wrap;
 }
 
 .client-list__thumb {
-  width: calc((100% - 5 * 30px) / 6);
+  width: calc((100% - 30px) / 2);
+  @media screen and (max-width: $tablet-1px) {
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 5 * 30px) / 6);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

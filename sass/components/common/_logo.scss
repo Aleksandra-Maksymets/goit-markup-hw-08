@@ -1,15 +1,19 @@
 .logo {
   font-family: $logo-font;
-  @include typography(700, 26px, 1.2, 0.03em);
-  // font-weight: 700;
-  // font-size: 26px;
-  // line-height: 1.2;
-  // letter-spacing: 0.03em;
+  @include typography(400, 24px, 1.17, 0.03em);
+
   color: $logo-color;
 
   &:focus,
   &:hover {
     cursor: pointer;
+  }
+  @media screen and (min-width: $desktop) {
+    @include typography(700, 26px, 1.2, 0.03em);
+    // font-weight: 700;
+    // font-size: 26px;
+    // line-height: 1.2;
+    // letter-spacing: 0.03em;
   }
 }
 .logo__text {
@@ -17,7 +21,10 @@
 }
 
 .footer__logo {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
   color: $secondary-accent-color;
+  @media screen and (max-width: $tablet-1px) {
+    text-align: center;
+  }
 }

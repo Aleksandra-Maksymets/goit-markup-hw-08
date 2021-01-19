@@ -21,8 +21,7 @@
   right: 0;
 
   @include centered-flex(flex, center, center);
-
-  width: 370px;
+  max-width: 100%;
   min-height: 70px;
 
   background-color: $advantages-lable-bg-color;
