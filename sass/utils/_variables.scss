@@ -54,9 +54,13 @@ $main-font: "Roboto", sans-serif;
 $logo-font: "Raleway", sans-serif;
 
 // Breakpoints
-$mobile-1px: 479px;
 $mobile: 480px;
+$mobile-plus: 481px;
+$mobile-max: 576px;
+$tablet-min: 577px;
 $tablet-1px: 767px;
 $tablet: 768px;
+$tablet-plus: 769px;
+$tablet-max: 960px;
 $desktop-1px: 1199px;
 $desktop: 1200px;

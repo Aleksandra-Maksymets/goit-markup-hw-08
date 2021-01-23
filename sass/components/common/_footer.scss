@@ -3,8 +3,9 @@
 }
 
 .adress-wrapper {
-  @media screen and (max-width: $tablet-1px) {
-    text-align: center;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    margin-right: 165px;
   }
   @media screen and (min-width: $desktop) {
     margin-right: 70px;
@@ -52,9 +53,10 @@
 .social-media__text,
 .subscribe__text {
   margin-bottom: 20px;
-  @media screen and (max-width: $tablet-1px) {
-    text-align: center;
-    margin-top: 60px;
+  text-align: center;
+  margin-top: 60px;
+  @media screen and (min-width: $tablet) {
+    margin-top: 0px;
   }
   @include typography(700, 14px, 1.14, 0.03em);
   // font-weight: 700;
@@ -110,11 +112,24 @@
     outline: none;
     border-color: $primary-accent-color;
   }
-  @media screen and (max-width: $tablet-1px) {
+  @media screen and (min-width: $tablet) {
     margin-bottom: 20px;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   @media screen and (min-width: $desktop) {
     width: 358px;
+  }
+}
+
+.footer__tablet-wraper {
+  @media screen and (min-width: $tablet) {
+    @include centered-flex(flex, baseline, center);
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
   }
 }

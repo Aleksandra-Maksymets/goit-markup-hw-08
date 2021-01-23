@@ -1,20 +1,35 @@
 .advantages {
   @extend %list;
+  @media screen and (min-width: $tablet) {
+    @include centered-flex(flex);
+    flex-wrap: wrap;
+  }
   @media screen and (min-width: $desktop) {
     @include centered-flex(flex, center, center);
+    flex-wrap: wrap;
   }
 }
 
 .advantages__item {
-  @media screen and (max-width: $desktop-1px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
     }
   }
 
   @media screen and (min-width: $desktop) {
     width: calc((100% - 3 * 30px) / 4);
-
+    margin-bottom: 0px;
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -29,7 +44,7 @@
   // line-height: 1.14;
   // letter-spacing: 0.03em;
   text-transform: uppercase;
-  @media screen and (min-width: $mobile) and (max-width: $tablet-1px) {
+  @media screen and (max-width: $tablet-1px) {
     text-align: center;
   }
 }

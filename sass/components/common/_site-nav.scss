@@ -1,29 +1,37 @@
-.site-nav {
-  @media screen and (min-width: $desktop) {
+.site-nav__list {
+  @extend %list;
+  @media screen and (min-width: $tablet-min) {
     @include centered-flex(flex, center);
   }
 }
 
-.site-nav__logo {
-  @media screen and (min-width: $desktop) {
-    margin-right: 93px;
-  }
-}
+.site-nav__item {
+  &:not(:last-child) {
+    @media screen and (max-width: $mobile-max) {
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $tablet-min) {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
 
-.site-nav__list {
-  @extend %list;
-  @media screen and (min-width: $desktop) {
-    @include centered-flex(flex);
-  }
-}
-
-.site-nav__item:not(:last-child) {
-  @media screen and (min-width: $desktop) {
-    margin-right: 50px;
+    &:last-child {
+      @media screen and (max-width: $mobile-max) {
+        margin-bottom: 60px;
+      }
+    }
   }
 }
 
 .site-nav__link {
+  display: block;
+  @include typography(500, 14px, 1.4, 0.02em);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
   &:hover,
   &:focus {
     color: $primary-accent-color;
@@ -31,30 +39,22 @@
   }
   @extend %animation-color;
 
-  @media screen and (min-width: $desktop) {
-    display: block;
+  @media screen and (min-width: $tablet-min) {
     padding-top: 32px;
     padding-bottom: 32px;
-    @include typography(500, 14px, 1.4, 0.02em);
-    // font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
-    // letter-spacing: 0.02em;
   }
 }
 
 .site-nav__link--current {
   position: relative;
   color: $primary-accent-color;
-
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
   }
 
   &::after {
     position: absolute;
-    bottom: 0;
-    left: 0;
 
     content: "";
     display: block;
@@ -62,5 +62,15 @@
     height: 4px;
     border-radius: 2px;
     background: $primary-accent-color;
+
+    @media screen and (max-width: $tablet-min) {
+      bottom: -10px;
+      left: 0;
+    }
+
+    @media screen and (min-width: $tablet-min) {
+      bottom: 0;
+      left: 0;
+    }
   }
 }

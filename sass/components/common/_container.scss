@@ -1,37 +1,53 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-  }
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
-  }
-}
-
-.header__container {
-  @media screen and (min-width: $desktop) {
-    @include centered-flex(flex, center);
-  }
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .footer__container {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: $desktop) {
-    @include centered-flex(flex, baseline);
-  }
 }
 
 .portfolio__container {
   @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+}
+@media screen and (min-width: $mobile) {
+  .container,
+  .header__container,
+  .footer__container {
+    width: $mobile;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: $mobile-plus) {
+  .header__container {
+    width: 100%;
+    @include centered-flex(flex, center);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container,
+  .header__container,
+  .footer__container {
+    width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container,
+  .header__container,
+  .footer__container {
+    width: $desktop;
+  }
+  .footer__container {
+    @include centered-flex(flex, baseline);
   }
 }

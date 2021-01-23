@@ -21,15 +21,33 @@
   <body>
     <!-- Header of a page -->
     <header class="header">
+      <!-- Navigation -->
       <div class="container header__container">
         <!-- logo -->
-        <a href="./index.html" class="logo link"
+        <a href="./index.html" class="logo header__logo link"
           ><span class="logo__text">Web</span>Studio</a
         >
-        <!-- Navigation -->
-        <div class="menu-wrap">
+        <!-- Menu button -->
+        <button
+          type="button"
+          class="menu__button"
+          aria-expanded="false"
+          aria-controls="menu"
+          data-menu-button
+        >
+          <svg
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-menu" href="./images/sprite.svg#burger-menu"></use>
+            <use class="icon-cross" href="./images/sprite.svg#menu-cross"></use>
+          </svg>
+        </button>
+        <!-- Menu container -->
+        <div class="menu" id="menu" data-menu>
+          <!-- Site navigation -->
           <nav class="site-nav">
-            <!-- Main links -->
             <ul class="site-nav__list">
               <li class="site-nav__item">
                 <a
@@ -55,7 +73,12 @@
                 href="mailto:info@devstudio.com"
                 class="contacts-nav__link link"
               >
-                <svg class="icon-email" width="16px" height="12px">
+                <svg
+                  class="icon-email"
+                  width="16px"
+                  height="12px"
+                  aria-label="Иконка отправить писмо"
+                >
                   <use href="./images/sprite.svg#email"></use>
                 </svg>
                 info@devstudio.com
@@ -63,7 +86,12 @@
             </li>
             <li class="contacts-nav__item">
               <a href="tel:+380961111111" class="contacts-nav__link link">
-                <svg class="icon-phone" width="10px" height="16px">
+                <svg
+                  class="icon-phone"
+                  width="10px"
+                  height="16px"
+                  aria-label="Иконка позвонить"
+                >
                   <use href="./images/sprite.svg#phone"></use>
                 </svg>
                 +38 096 111 11 11
@@ -88,7 +116,10 @@
         <ul class="advantages container">
           <li class="advantages__item">
             <div class="advantages__thumb">
-              <svg class="advantages__icon">
+              <svg
+                class="advantages__icon"
+                aria-label="Иконка спутниковой тарелки"
+              >
                 <use href="./images/sprite.svg#satellite-dish"></use>
               </svg>
             </div>
@@ -100,7 +131,7 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__thumb">
-              <svg class="advantages__icon">
+              <svg class="advantages__icon" aria-label="Иконка часов">
                 <use href="./images/sprite.svg#clock"></use>
               </svg>
             </div>
@@ -112,7 +143,10 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__thumb">
-              <svg class="advantages__icon">
+              <svg
+                class="advantages__icon"
+                aria-label="Иконка графика на ноутбуке"
+              >
                 <use href="./images/sprite.svg#diagram"></use>
               </svg>
             </div>
@@ -124,7 +158,10 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__thumb">
-              <svg class="advantages__icon">
+              <svg
+                class="advantages__icon"
+                aria-label="Иконка космонавта среди звезд"
+              >
                 <use href="./images/sprite.svg#astronaut"></use>
               </svg>
             </div>
@@ -540,76 +577,79 @@
     <footer class="footer">
       <div class="footer__container container">
         <!-- Logo -->
-        <div class="adress-wrapper">
-          <a href="./index.html" class="logo footer__logo link"
-            ><span class="logo__text">Web</span>Studio</a
-          >
-          <!-- Adress -->
-          <address>
-            <ul class="address">
-              <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="address__item">
-                <a href="mailto:info@devstudio.com" class="address__link link"
-                  >info@devstudio.com</a
+        <div class="footer__tablet-wraper">
+          <div class="adress-wrapper">
+            <a href="./index.html" class="logo footer__logo link"
+              ><span class="logo__text">Web</span>Studio</a
+            >
+            <!-- Adress -->
+            <address>
+              <ul class="address">
+                <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address__item">
+                  <a href="mailto:info@devstudio.com" class="address__link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a href="tel:+380961111111" class="address__link link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-media">
+            <p class="social-media__text">Присоединяйтесь</p>
+            <ul class="social-links">
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="instagram link"
                 >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a href="tel:+380961111111" class="address__link link"
-                  >+38 096 111 11 11</a
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="twitter link"
                 >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="facebook link"
+                >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="linkedin link"
+                >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="social-media">
-          <p class="social-media__text">Присоединяйтесь</p>
-          <ul class="social-links">
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="instagram link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="twitter link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="facebook link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="linkedin link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="subscribe">
           <p class="subscribe__text">Подпишитесь на рассылку</p>
           <form class="form subscribe__form js-subscribe-form">
@@ -704,9 +744,7 @@
         </form>
       </div>
     </div>
-
     <script src="./js/modal.js"></script>
-
     <script>
       (() => {
         document
@@ -722,20 +760,20 @@
           });
       })();
     </script>
-
     <script>
       (() => {
-        document
-          .querySelector(".js-modal-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
+        const menuBtnRef = document.querySelector("[data-menu-button]");
+        const mobileMenuRef = document.querySelector("[data-menu]");
 
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
+        menuBtnRef.addEventListener("click", () => {
+          const expanded =
+            menuBtnRef.getAttribute("aria-expanded") === "true" || false;
 
-            e.currentTarget.reset();
-          });
+          menuBtnRef.classList.toggle("is-open");
+          menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+          mobileMenuRef.classList.toggle("is-open");
+        });
       })();
     </script>
   </body>

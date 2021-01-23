@@ -20,6 +20,18 @@
   color: $primary-accent-color;
 }
 
+.header__logo {
+  @media screen and (min-width: $tablet-min) {
+    margin-right: 20px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
+}
+
 .footer__logo {
   display: block;
   margin-bottom: 20px;

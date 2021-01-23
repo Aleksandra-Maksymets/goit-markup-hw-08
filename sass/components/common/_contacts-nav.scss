@@ -1,12 +1,26 @@
 .contacts-nav {
   @extend %list;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $mobile-max) {
     margin-left: auto;
+  }
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-1px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: $desktop) {
     @include centered-flex(flex);
+    margin-left: auto;
   }
 }
 
 .contacts-nav__item:not(:last-child) {
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-1px) {
+    margin-bottom: 10px;
+  }
+
   @media screen and (min-width: $desktop) {
     margin-right: 50px;
   }
@@ -38,6 +52,11 @@
 .icon-email,
 .icon-phone {
   display: none;
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+    margin-right: 8px;
+    fill: currentColor;
+  }
   @media screen and (min-width: $desktop) {
     display: inline-block;
     margin-right: 10px;

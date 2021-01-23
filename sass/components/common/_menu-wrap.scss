@@ -1,7 +1,0 @@
-.menu-wrap {
-  @media screen and (min-width: $desktop) {
-    @include centered-flex(flex, center, center);
-    margin-left: 93px;
-    width: 100%;
-  }
-}
