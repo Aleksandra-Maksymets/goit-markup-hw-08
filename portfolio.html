@@ -22,7 +22,7 @@
     <!-- Header of a page -->
     <header class="header">
       <!-- Navigation -->
-      <nav class="container header__container">
+      <div class="container header__container">
         <!-- logo -->
         <a href="./index.html" class="logo header__logo link"
           ><span class="logo__text">Web</span>Studio</a
@@ -47,7 +47,7 @@
         <!-- Menu container -->
         <div class="menu" id="menu" data-menu>
           <!-- Site navigation -->
-          <div class="site-nav">
+          <nav class="site-nav">
             <ul class="site-nav__list">
               <li class="site-nav__item">
                 <a href="./index.html" class="site-nav__link link">Студия</a>
@@ -63,7 +63,7 @@
                 <a href="#" class="site-nav__link link">Контакты</a>
               </li>
             </ul>
-          </div>
+          </nav>
           <!-- Contacnts -->
           <ul class="contacts-nav">
             <li class="contacts-nav__item">
@@ -97,8 +97,9 @@
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
     </header>
+
     <!-- Main content of a portfolio page-->
     <main>
       <section class="portfolio portfolio__container container">
@@ -141,7 +142,7 @@
                 <img
                   src="./images/technokryak.jpg"
                   alt="Изображение сайта Технокряк на экране ноутбука"
-                  width="370"
+                  width="450"
                   height="294"
                 />
               </div>
@@ -329,76 +330,79 @@
     <footer class="footer">
       <div class="footer__container container">
         <!-- Logo -->
-        <div class="adress-wrapper">
-          <a href="./index.html" class="logo footer__logo link"
-            ><span class="logo__text">Web</span>Studio</a
-          >
-          <!-- Adress -->
-          <address>
-            <ul class="address list">
-              <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="address__item">
-                <a href="mailto:info@devstudio.com" class="address__link link"
-                  >info@devstudio.com</a
+        <div class="footer__tablet-wraper">
+          <div class="adress-wrapper">
+            <a href="./index.html" class="logo footer__logo link"
+              ><span class="logo__text">Web</span>Studio</a
+            >
+            <!-- Adress -->
+            <address>
+              <ul class="address">
+                <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address__item">
+                  <a href="mailto:info@devstudio.com" class="address__link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a href="tel:+380961111111" class="address__link link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-media">
+            <p class="social-media__text">Присоединяйтесь</p>
+            <ul class="social-links">
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="instagram link"
                 >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a href="tel:+380961111111" class="address__link link"
-                  >+38 096 111 11 11</a
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="twitter link"
                 >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="facebook link"
+                >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a
+                  href="#"
+                  class="social-links__thumb social-links__thumb--grey link"
+                  aria-label="linkedin link"
+                >
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="social-media">
-          <p class="social-media__text">Присоединяйтесь</p>
-          <ul class="social-links list">
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="instagram link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="twitter link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="facebook link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a
-                href="#"
-                class="social-links__thumb social-links__thumb--grey link"
-                aria-label="linkedin link"
-              >
-                <svg class="social-links__icon" width="20px" height="20px">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="subscribe">
           <p class="subscribe__text">Подпишитесь на рассылку</p>
           <form class="form subscribe__form js-subscribe-form">

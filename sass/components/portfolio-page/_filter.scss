@@ -1,11 +1,26 @@
 .filter {
-  @include centered-flex(flex, center, center);
-
-  margin-bottom: 50px;
-
   @extend %list;
+  @include centered-flex(flex);
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    align-self: center;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (max-width: $tablet-1px) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+  }
 }
