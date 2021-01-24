@@ -377,7 +377,12 @@ img {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
   border-bottom: 1px solid #ececec;
 }
 
@@ -406,15 +411,28 @@ img {
     left: 0;
     width: 100%;
     z-index: 1;
-    display: none;
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 100ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 100ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 100ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu.is-open {
     display: block;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
   }
 }
 
@@ -521,17 +539,11 @@ img {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .site-nav__item:not(:last-child):last-child {
-    margin-bottom: 60px;
-  }
-}
-
 .site-nav__link {
-  display: block;
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
@@ -550,6 +562,14 @@ img {
 .site-nav__link--current {
   position: relative;
   color: #2196f3;
+  padding-bottom: 12px;
+}
+
+@media screen and (min-width: 577px) {
+  .site-nav__link--current {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .site-nav__link--current:hover, .site-nav__link--current:focus {
@@ -564,25 +584,18 @@ img {
   height: 4px;
   border-radius: 2px;
   background: #2196f3;
+  bottom: 0;
+  left: 0;
 }
 
-@media screen and (max-width: 577px) {
-  .site-nav__link--current::after {
-    bottom: -10px;
-    left: 0;
-  }
-}
-
-@media screen and (min-width: 577px) {
-  .site-nav__link--current::after {
-    bottom: 0;
-    left: 0;
-  }
+.contacts-nav {
+  margin-top: 60px;
 }
 
 @media screen and (min-width: 576px) {
   .contacts-nav {
     margin-left: auto;
+    margin-top: 0px;
   }
 }
 

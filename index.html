@@ -744,7 +744,19 @@
         </form>
       </div>
     </div>
+
+    <!-- JavaScript -->
+
+    <!-- Подключение скрипта для модального окна -->
     <script src="./js/modal.js"></script>
+
+    <!-- Подключение скрипта для мобильного меню -->
+    <script src="./js/mobile-menu.js"></script>
+
+    <!-- Подключение скрипта для вычисления динамической высоты фиксированного хедера -->
+    <script src="./js/fixed-header.js"></script>
+
+    <!-- Симуляция отправки данных -->
     <script>
       (() => {
         document
@@ -758,22 +770,6 @@
 
             e.currentTarget.reset();
           });
-      })();
-    </script>
-    <script>
-      (() => {
-        const menuBtnRef = document.querySelector("[data-menu-button]");
-        const mobileMenuRef = document.querySelector("[data-menu]");
-
-        menuBtnRef.addEventListener("click", () => {
-          const expanded =
-            menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-
-          menuBtnRef.classList.toggle("is-open");
-          menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-          mobileMenuRef.classList.toggle("is-open");
-        });
       })();
     </script>
   </body>

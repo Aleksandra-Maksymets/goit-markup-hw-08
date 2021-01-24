@@ -1,5 +1,10 @@
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary-background-color;
   border-bottom: 1px solid $header-border-color;
   @media screen and (max-width: $mobile-max) {
     padding-top: 16px;

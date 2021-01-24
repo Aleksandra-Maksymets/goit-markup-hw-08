@@ -1,7 +1,9 @@
 .contacts-nav {
   @extend %list;
+  margin-top: 60px;
   @media screen and (min-width: $mobile-max) {
     margin-left: auto;
+    margin-top: 0px;
   }
   @media screen and (min-width: $tablet-min) and (max-width: $desktop-1px) {
     padding-top: 21px;

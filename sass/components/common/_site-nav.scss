@@ -16,18 +16,12 @@
     @media screen and (min-width: $tablet) {
       margin-right: 50px;
     }
-
-    &:last-child {
-      @media screen and (max-width: $mobile-max) {
-        margin-bottom: 60px;
-      }
-    }
   }
 }
 
 .site-nav__link {
-  display: block;
-  @include typography(500, 14px, 1.4, 0.02em);
+  display: inline-block;
+  @include typography(500, 14px, 1.14, 0.02em);
   // font-weight: 500;
   // font-size: 14px;
   // line-height: 1.14;
@@ -48,6 +42,12 @@
 .site-nav__link--current {
   position: relative;
   color: $primary-accent-color;
+  padding-bottom: 12px;
+
+  @media screen and (min-width: $tablet-min) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   &:hover,
   &:focus {
     cursor: pointer;
@@ -62,15 +62,7 @@
     height: 4px;
     border-radius: 2px;
     background: $primary-accent-color;
-
-    @media screen and (max-width: $tablet-min) {
-      bottom: -10px;
-      left: 0;
-    }
-
-    @media screen and (min-width: $tablet-min) {
-      bottom: 0;
-      left: 0;
-    }
+    bottom: 0;
+    left: 0;
   }
 }
