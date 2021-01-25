@@ -7,12 +7,12 @@
 }
 
 .work-example__card {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 30px;
   &:last-child {
     margin-bottom: 0px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1px) {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
     &:nth-child(even) {

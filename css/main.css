@@ -2002,7 +2002,7 @@ img {
 }
 
 .work-example__card {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 30px;
 }
 
@@ -2010,7 +2010,7 @@ img {
   margin-bottom: 0px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .work-example__card {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
