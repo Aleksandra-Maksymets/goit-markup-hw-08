@@ -180,34 +180,74 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="what-we-do">
             <li class="what-we-do__item">
-              <img
-                src="./images/pic-1.jpg"
-                alt="Человек пишет код на планшете с помощью беспроводной клавиатуры"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/what-we-do/pic-1_desk-370.webp    1x,
+                    ./images/what-we-do/pic-1_desk-370@2x.webp 2x,
+                    ./images/what-we-do/pic-1_desk-370@3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/what-we-do/pic-1_desk-370.jpg    1x,
+                    ./images/what-we-do/pic-1_desk-370@2x.jpg 2x,
+                    ./images/what-we-do/pic-1_desk-370@3x.jpg 3x
+                  "
+                  src="./images/what-we-do/pic-1_desk-370.jpg"
+                  alt="Человек пишет код на планшете с помощью беспроводной клавиатуры"
+                />
+              </picture>
               <div class="what-we-do__thumb">
                 <p class="what-we-do__lable">Десктопные приложения</p>
               </div>
             </li>
             <li class="what-we-do__item">
-              <img
-                src="./images/pic-2.jpg"
-                alt="Смартфон в руках человека"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/what-we-do/pic-2_desk-370.webp    1x,
+                    ./images/what-we-do/pic-2_desk-370@2x.webp 2x,
+                    ./images/what-we-do/pic-2_desk-370@3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/what-we-do/pic-2_desk-370.jpg    1x,
+                    ./images/what-we-do/pic-2_desk-370@2x.jpg 2x,
+                    ./images/what-we-do/pic-2_desk-370@3x.jpg 3x
+                  "
+                  src="./images/what-we-do/pic-2_desk-370.jpg"
+                  alt="Смартфон в руках человека"
+                />
+              </picture>
               <div class="what-we-do__thumb">
                 <p class="what-we-do__lable">Мобильные приложения</p>
               </div>
             </li>
             <li class="what-we-do__item">
-              <img
-                src="./images/pic-3.jpg"
-                alt="Человек выбирает стилусом на планшете цвет из палитры"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/what-we-do/pic-3_desk-370.webp    1x,
+                    ./images/what-we-do/pic-3_desk-370@2x.webp 2x,
+                    ./images/what-we-do/pic-3_desk-370@3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/what-we-do/pic-3_desk-370.jpg    1x,
+                    ./images/what-we-do/pic-3_desk-370@2x.jpg 2x,
+                    ./images/what-we-do/pic-3_desk-370@3x.jpg 3x
+                  "
+                  src="./images/what-we-do/pic-3_desk-370.jpg"
+                  alt="Человек выбирает стилусом на планшете цвет из палитры"
+                />
+              </picture>
+
               <div class="what-we-do__thumb">
                 <p class="what-we-do__lable">Дизайнерские решения</p>
               </div>
@@ -221,13 +261,71 @@
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
+            <!-- team-member-1 -->
             <li class="team-member">
-              <img
-                src="./images/team-member-1.jpg"
-                alt="Парень в очках в бордовой рубашке"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-1/desk/team-member-1_desk-270.webp    1x,
+                    ./images/our-team/team-member-1/desk/team-member-1_desk-270@2x.webp 2x,
+                    ./images/our-team/team-member-1/desk/team-member-1_desk-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-1/desk/team-member-1_desk-270.jpg    1x,
+                    ./images/our-team/team-member-1/desk/team-member-1_desk-270@2x.jpg 2x,
+                    ./images/our-team/team-member-1/desk/team-member-1_desk-270@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <!-- Tablet -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-1/tablet/team-member-1_tab-354.webp    1x,
+                    ./images/our-team/team-member-1/tablet/team-member-1_tab-354@2x.webp 2x,
+                    ./images/our-team/team-member-1/tablet/team-member-1_tab-354@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-1/tablet/team-member-1_tab-354.jpg    1x,
+                    ./images/our-team/team-member-1/tablet/team-member-1_tab-354@2x.jpg 2x,
+                    ./images/our-team/team-member-1/tablet/team-member-1_tab-354@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-1/mob/team-member-1_mob-450.webp    1x,
+                    ./images/our-team/team-member-1/mob/team-member-1_mob-450@2x.webp 2x,
+                    ./images/our-team/team-member-1/mob/team-member-1_mob-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-1/mob/team-member-1_mob-450.jpg    1x,
+                    ./images/our-team/team-member-1/mob/team-member-1_mob-450@2x.jpg 2x,
+                    ./images/our-team/team-member-1/mob/team-member-1_mob-450@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/our-team/team-member-1/tablet/team-member-1_tab-354.jpg"
+                  alt="Парень в очках в бордовой рубашке"
+                />
+              </picture>
               <div class="team-member__info">
                 <h3 class="team-member__name">Игорь Демьяненко</h3>
                 <p class="team-member__position">Product Designer</p>
@@ -295,13 +393,71 @@
                 </ul>
               </div>
             </li>
+            <!-- team-member-2 -->
             <li class="team-member">
-              <img
-                src="./images/team-member-2.jpg"
-                alt="Блондинка в очках в черном пиджаке"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-2/desk/team-member-2_desk-270.webp    1x,
+                    ./images/our-team/team-member-2/desk/team-member-2_desk-270@2x.webp 2x,
+                    ./images/our-team/team-member-2/desk/team-member-2_desk-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-2/desk/team-member-2_desk-270.jpg    1x,
+                    ./images/our-team/team-member-2/desk/team-member-2_desk-270@2x.jpg 2x,
+                    ./images/our-team/team-member-2/desk/team-member-2_desk-270@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <!-- Tablet -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-2/tablet/team-member-2_tab-354.webp    1x,
+                    ./images/our-team/team-member-2/tablet/team-member-2_tab-354@2x.webp 2x,
+                    ./images/our-team/team-member-2/tablet/team-member-2_tab-354@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-2/tablet/team-member-2_tab-354.jpg    1x,
+                    ./images/our-team/team-member-2/tablet/team-member-2_tab-354@2x.jpg 2x,
+                    ./images/our-team/team-member-2/tablet/team-member-2_tab-354@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-2/mob/team-member-2_mob-450.webp    1x,
+                    ./images/our-team/team-member-2/mob/team-member-2_mob-450@2x.webp 2x,
+                    ./images/our-team/team-member-2/mob/team-member-2_mob-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-2/mob/team-member-2_mob-450.jpg    1x,
+                    ./images/our-team/team-member-2/mob/team-member-2_mob-450@2x.jpg 2x,
+                    ./images/our-team/team-member-2/mob/team-member-2_mob-450@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/our-team/team-member-2/tablet/team-member-2_tab-354.jpg"
+                  alt="Блондинка в очках в черном пиджаке"
+                />
+              </picture>
               <div class="team-member__info">
                 <h3 class="team-member__name">Ольга Репина</h3>
                 <p class="team-member__position">Frontend Developer</p>
@@ -369,13 +525,77 @@
                 </ul>
               </div>
             </li>
+            <!-- team-member-3 -->
             <li class="team-member">
-              <img
+              <picture>
+                <!-- Desktop -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-3/desk/team-member-3_desk-270.webp    1x,
+                    ./images/our-team/team-member-3/desk/team-member-3_desk-270@2x.webp 2x,
+                    ./images/our-team/team-member-3/desk/team-member-3_desk-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-3/desk/team-member-3_desk-270.jpg    1x,
+                    ./images/our-team/team-member-3/desk/team-member-3_desk-270@2x.jpg 2x,
+                    ./images/our-team/team-member-3/desk/team-member-3_desk-270@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <!-- Tablet -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-3/tablet/team-member-3_tab-354.webp    1x,
+                    ./images/our-team/team-member-3/tablet/team-member-3_tab-354@2x.webp 2x,
+                    ./images/our-team/team-member-3/tablet/team-member-3_tab-354@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-3/tablet/team-member-3_tab-354.jpg    1x,
+                    ./images/our-team/team-member-3/tablet/team-member-3_tab-354@2x.jpg 2x,
+                    ./images/our-team/team-member-3/tablet/team-member-3_tab-354@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-3/mob/team-member-3_mob-450.webp    1x,
+                    ./images/our-team/team-member-3/mob/team-member-3_mob-450@2x.webp 2x,
+                    ./images/our-team/team-member-3/mob/team-member-3_mob-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-3/mob/team-member-3_mob-450.jpg    1x,
+                    ./images/our-team/team-member-3/mob/team-member-3_mob-450@2x.jpg 2x,
+                    ./images/our-team/team-member-3/mob/team-member-3_mob-450@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/our-team/team-member-3/tablet/team-member-3_tab-354.jpg"
+                  alt="Парень в голубой рубашке"
+                />
+              </picture>
+              <!-- <img
                 src="./images/team-member-3.jpg"
                 alt="Парень в голубой рубашке"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-member__info">
                 <h3 class="team-member__name">Николай Тарасов</h3>
                 <p class="team-member__position">Marketing</p>
@@ -443,13 +663,77 @@
                 </ul>
               </div>
             </li>
+            <!-- team-member-4 -->
             <li class="team-member">
-              <img
+              <picture>
+                <!-- Desktop -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-4/desk/team-member-4_desk-270.webp    1x,
+                    ./images/our-team/team-member-4/desk/team-member-4_desk-270@2x.webp 2x,
+                    ./images/our-team/team-member-4/desk/team-member-4_desk-270@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-4/desk/team-member-4_desk-270.jpg    1x,
+                    ./images/our-team/team-member-4/desk/team-member-4_desk-270@2x.jpg 2x,
+                    ./images/our-team/team-member-4/desk/team-member-4_desk-270@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 1200px)"
+                />
+                <!-- Tablet -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-4/tablet/team-member-4_tab-354.webp    1x,
+                    ./images/our-team/team-member-4/tablet/team-member-4_tab-354@2x.webp 2x,
+                    ./images/our-team/team-member-4/tablet/team-member-4_tab-354@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-4/tablet/team-member-4_tab-354.jpg    1x,
+                    ./images/our-team/team-member-4/tablet/team-member-4_tab-354@2x.jpg 2x,
+                    ./images/our-team/team-member-4/tablet/team-member-4_tab-354@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    ./images/our-team/team-member-4/mob/team-member-4_mob-450.webp    1x,
+                    ./images/our-team/team-member-4/mob/team-member-4_mob-450@2x.webp 2x,
+                    ./images/our-team/team-member-4/mob/team-member-4_mob-450@3x.webp 3x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/team-member-4/mob/team-member-4_mob-450.jpg    1x,
+                    ./images/our-team/team-member-4/mob/team-member-4_mob-450@2x.jpg 2x,
+                    ./images/our-team/team-member-4/mob/team-member-4_mob-450@3x.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/our-team/team-member-4/tablet/team-member-4_tab-354.jpg"
+                  alt="Парень в голубой рубашке"
+                />
+              </picture>
+              <!-- <img
                 src="./images/team-member-4.jpg"
                 alt="Парень в очках в черной футболке"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-member__info">
                 <h3 class="team-member__name">Михаил Ермаков</h3>
                 <p class="team-member__position">UI Designer</p>
