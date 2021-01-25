@@ -32,6 +32,7 @@
   }
 }
 
+// Кнопка формы подписки
 .subscribe__button {
   @include centered-flex(flex, center, center);
 
@@ -54,6 +55,7 @@
   }
 }
 
+// Кнопка модального окна "Отправить"
 .form__button {
   display: block;
 
@@ -70,6 +72,71 @@
   }
 }
 
+//  Кнопка закрытия модального окна
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include centered-flex(flex, center, center);
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $header-border-color;
+
+  background-color: transparent;
+
+  @extend %animation-color;
+  @extend %animation-border-color;
+
+  &:hover,
+  &:focus {
+    color: $primary-accent-color;
+    border-color: $primary-accent-color;
+    cursor: pointer;
+  }
+}
+
+.icon-close {
+  fill: currentColor;
+}
+
+// Кнопка мобильного меню
+.menu__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $primary-text-color;
+
+  @extend %animation-color;
+
+  & .icon-cross {
+    display: none;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: $primary-accent-color;
+  }
+  @media screen and (min-width: $tablet-min) {
+    display: none;
+  }
+}
+
+// Кнопка фильтра на странице Портфолио
 .filter__button {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -104,37 +171,4 @@
 .filter__button--current {
   color: $secondary-accent-color;
   background-color: $primary-accent-color;
-}
-
-.menu__button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: $primary-text-color;
-
-  @extend %animation-color;
-
-  & .icon-cross {
-    display: none;
-  }
-  &.is-open .icon-cross {
-    display: block;
-  }
-  &.is-open .icon-menu {
-    display: none;
-  }
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    fill: $primary-accent-color;
-  }
-  @media screen and (min-width: $tablet-min) {
-    display: none;
-  }
 }
